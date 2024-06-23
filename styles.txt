@@ -1,0 +1,175 @@
+/* .Wrapper{
+    display: flex;
+    margin: 20px auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    
+}
+
+.home{
+
+}
+
+.Categories{}
+
+.About{}
+
+.log-in{
+    color: #fff;
+}
+
+.log {
+    background-color: rgb(113, 113, 241);
+    color: #fff;
+
+}
+
+.register{
+   color: #fff;
+
+}
+
+.reg {
+    background-color: rgb(113, 113, 241);
+   color: #fff;
+
+
+}
+
+.seperater {
+    border-top: 7px solid black;
+    border-radius: 5px;
+}
+
+.h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.con {
+    display: flex;
+}
+
+.in {
+    border: 1px solid brown;
+    margin: 5px 20px;
+    padding: 5px;
+    border-radius: 10px;
+} */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  /* .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  } */
+  
+  /* Header Styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Wrapper{
+    display: flex;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 10px 20px;
+    align-items: center;
+}
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+  }
+  
+  header nav a:hover {
+    background-color: #222;
+  }
+  
+  .separator {
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+  }
+  
+  /* Main Content Styles */
+  h2 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .con p {
+    margin: 0 10px;
+  }
+  
+  .in {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  /* News Container Styles */
+  #news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .news-item {
+    width: 45%;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+  }
+  
+  .news-item h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .news-item h3 a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .news-item h3 a:hover {
+    text-decoration: underline;
+  }
+  
+  .news-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 5px;
+  }
+  

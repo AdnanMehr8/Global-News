@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice HTML</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="logo">
+        <h1>Logo</h1>
+    <input type="search" id="country" placeholder="country code e.g. in, au, cn etc.." autocomplete="address-level1" class="in">
+    <button onclick="updateCountryName()">Search</button>
+
+      </div>
+      <nav class="navigation">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Categories</a>
+        <a href="#" class="nav-link">About</a>
+      </nav>
+      <div class="authentication">
+        <button class="log">Log In</button>
+        <button class="reg">Register</button>
+      </div>
+    </div>
+  </header>
+  <div class="separator"></div>
+
+  <h2 class="h2">Here's what happened in <span id="demo"></span></h2>
+  <!-- <div class="con">
+    <p>Country:</p>
+    <input type="search" id="country" placeholder="country code e.g. in, au, cn etc.." autocomplete="address-level1" class="in">
+    <button onclick="updateCountryName()">Search</button>
+  </div> -->
+
+  <div class="pagination" id="pagination-top"></div>
+  
+  <div id="news-container"></div>
+  
+  <div class="pagination" id="pagination-bottom"></div>
+  <footer>
+    <div>footer</div>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+const myElement = document.getElementById("demo");
+const myElementt = document.getElementById("demoo");
+
+const newsElement = document.getElementById("news");
+
+window.searchCountry = function () {
+    const country = document.getElementById("country").value;
+    if (country) {
+        getCoordinates(country);
+    } else {
+        myElement.innerHTML = "Please enter a country name.";
+    }
+}
+
+function countryName (demoo) {
+    if (getCoordinates === country) {
+        myElementt.innerHTML = country;
+    } else {
+        myElementt.innerHTML = 'Something is wron'
+    }
+}
+
+function getCoordinates(country) {
+    const url = `https://nominatim.openstreetmap.org/search?country=${country}&format=json&limit=1`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log('Nominatim search response:', data);  // Debugging: Log the Nominatim search response
+            if (data.length > 0) {
+                const lat = data[0].lat;
+                const lon = data[0].lon;
+                const country_code = data[0].display_name.split(", ").pop().toLowerCase();
+                myElement.innerHTML = `Coordinates: Latitude: ${lat}, Longitude: ${lon}`;
+                getNews(country_code);
+            } else {
+                myElement.innerHTML = "Country not found";
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            myElement.innerHTML = "Error fetching location data";
+        });
+}
+
+function getNews(country_code) {
+    // const apiKey = '02f0bf7915d14e66b143dd95ae0be96b';
+    // const url = `https://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=${apiKey}`;
+    // const url = `https://saurav.tech/NewsAPI/everything/cnn.json`;
+    BASE_URL = "https://saurav.tech/NewsAPI/"
+    top_headlines_api = `${BASE_URL}/top-headlines/category/${category}/${country_code}.json`
+    everything_api = "<BASE_URL>/everything/<source_id>.json"
+
+    console.log('News API URL:', BASE_URL);  // Debugging: Log the News API URL
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log('News API response:', data);  // Debugging: Log the News API response
+            if (data.articles && data.articles.length > 0) {
+                let newsHTML = '<h3>Top News:</h3>';
+                data.articles.forEach(article => {
+                    newsHTML += `<div>
+                                    <h4>${article.title}</h4>
+                                    <p>${article.description}</p>
+                                    <a href="${article.url}" target="_blank">Read more</a>
+                                 </div>`;
+                });
+                newsElement.innerHTML = newsHTML;
+            } else {
+                newsElement.innerHTML = "No news found";
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            newsElement.innerHTML = "Error fetching news data";
+        });
+}

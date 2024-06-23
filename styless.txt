@@ -1,0 +1,161 @@
+/* styles.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+}
+
+header .Wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .Wrapper .logo h1 {
+    font-size: 24px;
+}
+
+header .Wrapper div {
+    margin: 0 10px;
+}
+
+header .Wrapper .log-in button, 
+header .Wrapper .register button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .Wrapper .log-in button:hover, 
+header .Wrapper .register button:hover {
+    background-color: #c0392b;
+}
+
+header .Wrapper .log-in, 
+header .Wrapper .register {
+    margin-left: auto;
+}
+
+.seperater {
+    height: 2px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+.h2 {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+
+.con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.con p {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.con .in {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.con button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.con button:hover {
+    background-color: #2980b9;
+}
+
+#news-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+#news-container div {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#news-container h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+#news-container p {
+    font-size: 16px;
+    color: #555;
+}
+
+#news-container img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-button.active {
+    background-color: #2980b9;
+    cursor: default;
+}
+
+.pagination-button:hover:not(.active) {
+    background-color: #1abc9c;
+}
